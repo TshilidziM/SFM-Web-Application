@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3638902-6E96-4C8F-ABC1-924E808C1B89}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SFM</RootNamespace>
+    <AssemblyName>SFM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\SFM_Database.mdf" />
+    <Content Include="App_Data\SFM_Database_log.ldf">
+      <DependentUpon>SFM_Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\hint.css" />
+    <Content Include="assets\css\sb-admin-2.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\img\favicon1.ico" />
+    <Content Include="assets\img\PeopleLogo.png" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\jquery-1.11.1.js" />
+    <Content Include="Client_Dashboard.aspx" />
+    <Content Include="Client_Messages.aspx" />
+    <Content Include="Client_Notification.aspx" />
+    <Content Include="Client_Progress.aspx" />
+    <Content Include="Client_Reports.aspx" />
+    <Content Include="Consultant_Reports.aspx" />
+    <Content Include="Consultant_Dashboard.aspx" />
+    <Content Include="Consultant_Messages.aspx" />
+    <Content Include="Consultant_Notifications.aspx" />
+    <Content Include="Consultant_Progress.aspx" />
+    <Content Include="Consultant_Schedule.aspx" />
+    <Content Include="Consultant_TimeTick.aspx" />
+    <Content Include="Consultant_Uploads.aspx" />
+    <Content Include="Director_Add.aspx" />
+    <Content Include="Director_AllocateManagerAndTime.aspx" />
+    <Content Include="Director_Dashboard.aspx" />
+    <Content Include="Director_Delete.aspx" />
+    <Content Include="Director_Edit.aspx" />
+    <Content Include="Director_EmployeeManagement.aspx" />
+    <Content Include="Director_Notifications.aspx" />
+    <Content Include="Director_Reports.aspx" />
+    <Content Include="Manager_AccountProgress.aspx" />
+    <Content Include="Manager_AssignedAccount.aspx" />
+    <Content Include="Manager_AssignWork.aspx" />
+    <Content Include="Manager_Dashboard.aspx" />
+    <Content Include="Manager_OverallProgress.aspx" />
+    <Content Include="Manager_Reports.aspx" />
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.LoginUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.RegisterVisitorUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.RegisterEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.EditEmployeeInformationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.RemoveEmployeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.LoginAdminResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.LoginConsultantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.LoginCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SFMWebservice\SFM.SFMWebservice.LoginManagerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SFMWebservice\SFMConsultingWebService.disco" />
+    <None Include="Service References\SFMWebservice\configuration91.svcinfo" />
+    <None Include="Service References\SFMWebservice\configuration.svcinfo" />
+    <None Include="Service References\SFMWebservice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SFMConsultingWebService.asmx" />
+    <Content Include="SFM_About.aspx" />
+    <Content Include="SFM_BEEConsulting.aspx" />
+    <Content Include="SFM_BusinessConsulting.aspx" />
+    <Content Include="SFM_Calculations.aspx" />
+    <Content Include="SFM_Contact.aspx" />
+    <Content Include="SFM_Divisions.aspx" />
+    <Content Include="SFM_FinancialManagementAndAccounting.aspx" />
+    <Content Include="SFM_Home.aspx" />
+    <Content Include="SFM_Login.aspx" />
+    <Content Include="SFM_NewPassword.aspx" />
+    <Content Include="SFM_Notification.aspx" />
+    <Content Include="SFM_Registration.aspx" />
+    <Content Include="SFM_TaxConsulting.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\SFMWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Service References\SFMWebservice\SFMConsultingWebService.wsdl" />
+    <None Include="Web References\SFMWebService\SFMConsultingWebService.disco" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client_Dashboard.aspx.cs">
+      <DependentUpon>Client_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Dashboard.aspx.designer.cs">
+      <DependentUpon>Client_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Messages.aspx.cs">
+      <DependentUpon>Client_Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Messages.aspx.designer.cs">
+      <DependentUpon>Client_Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Notification.aspx.cs">
+      <DependentUpon>Client_Notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Notification.aspx.designer.cs">
+      <DependentUpon>Client_Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Progress.aspx.cs">
+      <DependentUpon>Client_Progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Progress.aspx.designer.cs">
+      <DependentUpon>Client_Progress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Reports.aspx.cs">
+      <DependentUpon>Client_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client_Reports.aspx.designer.cs">
+      <DependentUpon>Client_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Reports.aspx.cs">
+      <DependentUpon>Consultant_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Reports.aspx.designer.cs">
+      <DependentUpon>Consultant_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Dashboard.aspx.cs">
+      <DependentUpon>Consultant_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Dashboard.aspx.designer.cs">
+      <DependentUpon>Consultant_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Messages.aspx.cs">
+      <DependentUpon>Consultant_Messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Messages.aspx.designer.cs">
+      <DependentUpon>Consultant_Messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Notifications.aspx.cs">
+      <DependentUpon>Consultant_Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Notifications.aspx.designer.cs">
+      <DependentUpon>Consultant_Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Progress.aspx.cs">
+      <DependentUpon>Consultant_Progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Progress.aspx.designer.cs">
+      <DependentUpon>Consultant_Progress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Schedule.aspx.cs">
+      <DependentUpon>Consultant_Schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Schedule.aspx.designer.cs">
+      <DependentUpon>Consultant_Schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_TimeTick.aspx.cs">
+      <DependentUpon>Consultant_TimeTick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_TimeTick.aspx.designer.cs">
+      <DependentUpon>Consultant_TimeTick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultant_Uploads.aspx.cs">
+      <DependentUpon>Consultant_Uploads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultant_Uploads.aspx.designer.cs">
+      <DependentUpon>Consultant_Uploads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_Add.aspx.cs">
+      <DependentUpon>Director_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_Add.aspx.designer.cs">
+      <DependentUpon>Director_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_AllocateManagerAndTime.aspx.cs">
+      <DependentUpon>Director_AllocateManagerAndTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_AllocateManagerAndTime.aspx.designer.cs">
+      <DependentUpon>Director_AllocateManagerAndTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_Dashboard.aspx.cs">
+      <DependentUpon>Director_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_Dashboard.aspx.designer.cs">
+      <DependentUpon>Director_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_Delete.aspx.cs">
+      <DependentUpon>Director_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_Delete.aspx.designer.cs">
+      <DependentUpon>Director_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_Edit.aspx.cs">
+      <DependentUpon>Director_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_Edit.aspx.designer.cs">
+      <DependentUpon>Director_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_EmployeeManagement.aspx.cs">
+      <DependentUpon>Director_EmployeeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_EmployeeManagement.aspx.designer.cs">
+      <DependentUpon>Director_EmployeeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_Notifications.aspx.cs">
+      <DependentUpon>Director_Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_Notifications.aspx.designer.cs">
+      <DependentUpon>Director_Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director_Reports.aspx.cs">
+      <DependentUpon>Director_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director_Reports.aspx.designer.cs">
+      <DependentUpon>Director_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_AccountProgress.aspx.cs">
+      <DependentUpon>Manager_AccountProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager_AccountProgress.aspx.designer.cs">
+      <DependentUpon>Manager_AccountProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_AssignedAccount.aspx.cs">
+      <DependentUpon>Manager_AssignedAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager_AssignedAccount.aspx.designer.cs">
+      <DependentUpon>Manager_AssignedAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_AssignWork.aspx.cs">
+      <DependentUpon>Manager_AssignWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager_AssignWork.aspx.designer.cs">
+      <DependentUpon>Manager_AssignWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Dashboard.aspx.cs">
+      <DependentUpon>Manager_Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager_Dashboard.aspx.designer.cs">
+      <DependentUpon>Manager_Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_OverallProgress.aspx.cs">
+      <DependentUpon>Manager_OverallProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager_OverallProgress.aspx.designer.cs">
+      <DependentUpon>Manager_OverallProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Reports.aspx.cs">
+      <DependentUpon>Manager_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager_Reports.aspx.designer.cs">
+      <DependentUpon>Manager_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SFMWebservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SFMConsulting.Master.cs">
+      <DependentUpon>SFMConsulting.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFMConsulting.Master.designer.cs">
+      <DependentUpon>SFMConsulting.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SFMConsultingWebService.asmx.cs">
+      <DependentUpon>SFMConsultingWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SFM_About.aspx.cs">
+      <DependentUpon>SFM_About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_About.aspx.designer.cs">
+      <DependentUpon>SFM_About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_BEEConsulting.aspx.cs">
+      <DependentUpon>SFM_BEEConsulting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_BEEConsulting.aspx.designer.cs">
+      <DependentUpon>SFM_BEEConsulting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SFM_BusinessConsulting.aspx.cs">
+      <DependentUpon>SFM_BusinessConsulting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_BusinessConsulting.aspx.designer.cs">
+      <DependentUpon>SFM_BusinessConsulting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Calculations.aspx.cs">
+      <DependentUpon>SFM_Calculations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Calculations.aspx.designer.cs">
+      <DependentUpon>SFM_Calculations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Contact.aspx.cs">
+      <DependentUpon>SFM_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Contact.aspx.designer.cs">
+      <DependentUpon>SFM_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Divisions.aspx.cs">
+      <DependentUpon>SFM_Divisions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Divisions.aspx.designer.cs">
+      <DependentUpon>SFM_Divisions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_FinancialManagementAndAccounting.aspx.cs">
+      <DependentUpon>SFM_FinancialManagementAndAccounting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_FinancialManagementAndAccounting.aspx.designer.cs">
+      <DependentUpon>SFM_FinancialManagementAndAccounting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Home.aspx.cs">
+      <DependentUpon>SFM_Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Home.aspx.designer.cs">
+      <DependentUpon>SFM_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Login.aspx.cs">
+      <DependentUpon>SFM_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Login.aspx.designer.cs">
+      <DependentUpon>SFM_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_NewPassword.aspx.cs">
+      <DependentUpon>SFM_NewPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_NewPassword.aspx.designer.cs">
+      <DependentUpon>SFM_NewPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Notification.aspx.cs">
+      <DependentUpon>SFM_Notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Notification.aspx.designer.cs">
+      <DependentUpon>SFM_Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_Registration.aspx.cs">
+      <DependentUpon>SFM_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_Registration.aspx.designer.cs">
+      <DependentUpon>SFM_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SFM_TaxConsulting.aspx.cs">
+      <DependentUpon>SFM_TaxConsulting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SFM_TaxConsulting.aspx.designer.cs">
+      <DependentUpon>SFM_TaxConsulting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SFMWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="SFMConsulting.Master" />
+    <None Include="Web References\SFMWebService\SFMConsultingWebService.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Divisions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:1039/SFMConsultingWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SFMWebService\</RelPath>
+      <UpdateFromURL>http://localhost:1039/SFMConsultingWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SFM_SFMWebService_SFMConsultingWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SFMWebservice\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1039/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

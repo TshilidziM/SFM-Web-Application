@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SFMConsulting.master.cs" Inherits="SFM.SFMConsulting" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SFM Consulting</title>
+
+    <link rel="icon" href="assets/img/favicon1.ico"/>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+
+    
+        <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME ICONS  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- BUTTON HINTS  -->
+    <link href="assets/css/hint.css" rel="stylesheet" />
+     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+          
+        </asp:ContentPlaceHolder>
+    </div>
+   
+
+     <div class="navbar navbar-inverse set-radius-zero">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+ <a class="navbar-brand" href="SFM_Home.aspx">
+
+                    <img src="assets/img/PeopleLogo.png" />
+                </a>
+
+            </div>
+
+            <div class="left-div">
+            <div class="user-settings-wrapper">
+                    <ul class="nav">
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGO HEADER END-->
+
+            <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                         <li><a  href="SFM_Home.aspx">Home</a></li>
+                            <li><a href="SFM_About.aspx">About</a></li>
+                                <li class ="dropdown">
+                             <a href="SFM_Home.aspx" id= "drop1" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                             aria-expanded="false"> Divisions <span class="caret"> </span></a>
+                             <ul role="menu" aria-labelledby="drop1" class="dropdown-menu">
+                             <li><a href="SFM_TaxConsulting.aspx"> Tax Consulting</a></li>
+                             <li><a href="SFM_BEEConsulting.aspx"> BBBEE Consulting</a></li>
+                             <li><a href="SFM_BusinessConsulting.aspx"> Business Consulting</a></li>
+                             <li><a href="SFM_FinancialManagementAndAccounting.aspx"> Financial Management & Accounting</a></li>
+                             </ul> 
+                             </li>
+                            <li><a href="SFM_Calculations.aspx">Calculations</a></li>
+                            <li><a href="SFM_Contact.aspx">Contact</a></li>
+                             <li><a href="SFM_Login.aspx">Login</a></li>
+                         
+
+                           
+
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+       
+    </section>
+    <!-- MENU SECTION END-->
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <!-- All content from other pages will go and reference this content placeholder-->
+
+
+
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                   &copy; 2015 SFM Consulting | All Rights Reserved.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END-->
+
+
+
+
+    <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+
+</body>
+</html>
