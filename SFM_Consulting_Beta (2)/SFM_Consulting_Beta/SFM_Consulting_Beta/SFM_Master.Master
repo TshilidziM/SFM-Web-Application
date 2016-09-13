@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SFM_Master.master.cs" Inherits="SFM_Consulting_Beta.SFM_Master" %>
+
+<!DOCTYPE html>
+<html>
+  <head id="Head1" runat="server">
+      <title>SFM Consulting</title>
+
+    <link rel="icon" href="assets/img/favicon1.ico"/>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+   
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+
+    
+       <!-- SweetAlert CSS  -->
+    <link href="assets/css/sweetalert.css" rel="stylesheet" />
+    <!-- SweetAlerts Javascript -->
+    <script src="assets/js/sweetalert.min.js"></script>
+   
+        <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME ICONS  -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- BUTTON HINTS  -->
+    <link href="assets/css/hint.css" rel="stylesheet" />
+     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!-- 
+    Powerful Template 
+    http://www.templatemo.com/preview/templatemo_390_powerful 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/templatemo_style.css" rel="stylesheet">
+      <style>
+      .dropbtn {
+    background-color: transparent;
+    color: #27D395;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sub-menu {
+    width:240%;
+    height:auto;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#27D395;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+      </style>
+    <link href="css/circle.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
+    <script src="js/modernizr.custom.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="show();">
+      
+    <header>
+        <div class="container">
+          <div class="row">
+            <div class="hidden-xs hidden-sm col-md-6">
+              <div class="mailme">
+                <!--<a href="mailto:info@company.com"><i class="fa fa-envelope"></i>info@company.com</a>-->
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+            
+            </div>
+          </div>
+        </div>
+      <!-- e/o mainTop -->
+      
+      	
+    </header>
+      <div class="mWrapper">
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-4">
+            <div class="logo">
+              <a href="SFM_Home.aspx"><img src="images/PeopleLogo.png" ></a>
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-8">
+            <nav class="mainMenu">
+              <ul id="menu-top" class="nav navbar-nav navbar-right; clearfix">
+                <li><a href="SFM_Home.aspx">Home</a></li>
+                  <li class="dropdown">
+                    <a class="dropbtn">Services<span class="caret"> </span></a>
+                 <div class="dropdown-content" >
+                    <a href="SFM_TaxConsulting.aspx">Tax Consulting</a>
+                    <a href="SFM_BEEConsulting.aspx">BEE Consulting</a>
+                    <a href="SFM_BusinessConsulting.aspx">Business Consulting</a>
+                    <a href="SFM_FinancialManagementAndAccounting.aspx">Financial Management & Accounting</a>
+                </div>
+                </li>
+                <li><a href="SFM_Calculations.aspx">Calculations</a></li>
+                <li><a href="SFM_About.aspx">About</a></li>
+                <li><a href="SFM_Contact.aspx">Contact</a></li>
+                   <li class="dropdown">
+                <a class="dropbtn">  <i class="fa fa-users" style="font-size:20px;"> </i><b class="caret"></b></a>
+                     <div class="dropdown-content" >
+                    <a href="SFM_Login.aspx"><i class="fa fa-sign-in" style="font-size:20px;"></i>Sign In</a>
+                    <a href="SFM_Registration.aspx"><i class="fa fa-pencil" style="font-size:20px;"></i>Register</a>
+                    <a href="SFM_BusinessConsulting.aspx"><i class="fa fa-sign-out" style="font-size:20px;"></i>Sign Out</a>
+                </div>
+                </li>
+                
+                  <!--<li class="dropdown">
+                             <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown">
+                             <i class="fa fa-users" style="font-size:20px;"> </i><b class="caret"></b></a>
+                          <ul role="menu" aria-labelledby="drop2" class="dropdown-menu; sub-menu">
+                       <li><a href="SFM_Login.aspx"><i class="fa fa-sign-in" style="font-size:20px;"></i> Sign-in</a></li>
+                               <li><a href="SFM_Registration.aspx"><i class="fa fa-pencil" style="font-size:20px;"></i> Register</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out" style="font-size:20px;"></i> Sign-out</a></li>
+                            </ul>
+                      </li>-->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <div>
+
+    </div><br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <footer>
+    <div class="bfWrap text-center"style="background-color:#2d343d">
+        <div class="templatemo_footer" style="color:white" >Copyright © 2084 Company Name</div>
+      </div>
+</footer>
+
+       <!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+    
+     <script src="scripts/modaltime.js"></script>
+   <!--Add the following script at the bottom of the web page (immediately before the </body> tag)-->
+<script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=80787996"></script>
+      <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+      </body>
+    </html>
